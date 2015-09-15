@@ -5,7 +5,9 @@ Example
 
 refreshView = [[JSRefreshView alloc] initWithFrame:myTableView.frame ScrollView:myTableView Delegate:self];
 
-delegate
+只需要将ScrollView这个参数替换为你的tableView或collectionView即可
+
+回调方法
 
 - (void)refreshView:(JSRefreshView *)view WithState:(JSRefreshStates)state
 {
@@ -17,6 +19,7 @@ delegate
             
         case JSRefreshStateUpLoadPulling: {
             //上拉加载
+            
         }
             break;
             
@@ -24,6 +27,5 @@ delegate
             break;
     }
 }
-
 
 
